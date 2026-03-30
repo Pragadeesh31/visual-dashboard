@@ -504,7 +504,7 @@ def generate_dashboard():
     now_ist = datetime.now(IST)
     current_hour = now_ist.hour
 
-    if not (12 <= current_hour < 19):
+    if not (17 <= current_hour < 19):
         print(
             f"The bubble chart is hidden. It only appears between 5 PM and 7 PM IST. (Current IST: {now_ist.strftime('%H:%M')})"
         )
