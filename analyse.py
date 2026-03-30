@@ -92,9 +92,6 @@ def generate_dashboard():
 
     apps_df["Size"] = apps_df["Size"].apply(convert_size)
 
-    # In[12]:
-
-    apps_df
 
     # In[13]:
 
@@ -490,7 +487,7 @@ def generate_dashboard():
         yaxis=dict(title_font={"size": 12}),
         margin=dict(l=10, r=10, t=30, b=10),
     )
-    # fig1.update_traces(marker=dict(pattern=dict(line=dict(color='white',width=1))))
+    # fig10.update_traces(marker=dict(pattern=dict(line=dict(color='white',width=1))))
     save_plot_as_html(
         fig10,
         "Paid Free Graph 10.html",
@@ -507,7 +504,7 @@ def generate_dashboard():
     now_ist = datetime.now(IST)
     current_hour = now_ist.hour
 
-    if not (17 <= current_hour < 19):
+    if not (12 <= current_hour < 19):
         print(
             f"The bubble chart is hidden. It only appears between 5 PM and 7 PM IST. (Current IST: {now_ist.strftime('%H:%M')})"
         )
